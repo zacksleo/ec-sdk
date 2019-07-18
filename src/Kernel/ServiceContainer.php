@@ -9,7 +9,7 @@ use Pimple\Container;
  *
  * @author zacksleo <zacksleo@gmail.com>
  *
- * @property \EasyWeChat\Kernel\Config                 $config
+ * @property array                                     $config
  * @property \Symfony\Component\HttpFoundation\Request $request
  * @property \GuzzleHttp\Client                        $http_client
  * @property \Monolog\Logger                           $logger

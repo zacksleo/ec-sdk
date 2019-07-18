@@ -25,8 +25,8 @@ class BaseClient
     /**
      * BaseClient constructor.
      *
-     * @param \EasyWeChat\Kernel\ServiceContainer                    $app
-     * @param \EasyWeChat\Kernel\Contracts\AccessTokenInterface|null $accessToken
+     * @param \Zacksleo\EcSdk\Kernel\ServiceContainer                    $app
+     * @param \Zacksleo\EcSdk\Kernel\Contracts\AccessTokenInterface|null $accessToken
      */
     public function __construct(ServiceContainer $app)
     {

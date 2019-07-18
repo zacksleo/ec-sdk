@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Ecs;
+namespace Zacksleo\EcSdk;
 
 /**
  * Class Factory.
@@ -15,7 +15,7 @@ class Factory
      * @param string $name
      * @param array  $config
      *
-     * @return \EasyWeChat\Kernel\ServiceContainer
+     * @return \Zacksleo\EcSdk\Kernel\ServiceContainer
      */
     public static function make($name, array $config)
     {

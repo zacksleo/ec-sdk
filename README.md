@@ -11,7 +11,29 @@ $ composer require zacksleo/ec-sdk -vvv
 
 ## Usage
 
-TODO
+```php
+    try {
+        $config = [
+            'key'        => 'key',
+            'secret'     => 'secret',
+            'debug'      => false,
+            'file'       => __DIR__.'/suning.log',
+            'level'      => 'error',
+            'permission' => 0777,
+        ];
+        $code = Factory::suning($config)->express->name2code('申通快递');
+        var_dump($code);
+    } catch (\Zacksleo\SuningSdk\SuningException $exception) {
+        //苏宁返回错误
+        var_dump($exception->getMessage());
+    } catch (\Hanson\Foundation\Exception\HttpException $exception) {
+        //Http 请求发生错误
+        var_dump($exception->getMessage());
+    } catch (\Exception $exception) {
+        $exception->getMessage();
+        var_dump($exception->getMessage());
+    }
+```
 
 ## Contributing
 

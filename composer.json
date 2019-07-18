@@ -8,7 +8,9 @@
             "email": "zacksleo@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "zacksleo/suning-sdk": "*"
+    },
     "autoload": {
         "psr-4": {
             "Zacksleo\\EcSdk\\": "src"

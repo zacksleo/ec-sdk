@@ -7,7 +7,7 @@ use Pimple\Container;
 /**
  * Class ServiceContainer.
  *
- * @author overtrue <i@overtrue.me>
+ * @author zacksleo <zacksleo@gmail.com>
  *
  * @property \EasyWeChat\Kernel\Config                 $config
  * @property \Symfony\Component\HttpFoundation\Request $request

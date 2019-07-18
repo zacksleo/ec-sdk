@@ -1,0 +1,17 @@
+{
+    "name": "zacksleo\/ec-sdk",
+    "description": "电商平台 SDK",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "zacksleo",
+            "email": "zacksleo@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Zacksleo\\EcSdk\\": "src"
+        }
+    }
+}

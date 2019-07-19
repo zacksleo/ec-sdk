@@ -13,6 +13,7 @@ use Pimple\Container;
  * @property \Symfony\Component\HttpFoundation\Request $request
  * @property \GuzzleHttp\Client                        $http_client
  * @property \Monolog\Logger                           $logger
+ * @property $order
  */
 class ServiceContainer extends Container
 {

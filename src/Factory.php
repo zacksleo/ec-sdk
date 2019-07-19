@@ -20,7 +20,7 @@ class Factory
     public static function make($name, array $config)
     {
         $namespace = ucfirst($name);
-        $application = "\\App\\Ecs\\{$namespace}\\Application";
+        $application = "\\Zacksleo\\EcSdk\\{$namespace}\\Application";
 
         return new $application($config);
     }

@@ -12,6 +12,7 @@ namespace Zacksleo\EcSdk\Suning\Order;
 
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
+use Zacksleo\EcSdk\Kernel\QueryBuilder;
 
 class ServiceProvider implements ServiceProviderInterface
 {
@@ -21,7 +22,7 @@ class ServiceProvider implements ServiceProviderInterface
     public function register(Container $app)
     {
         ! isset($app['order']) && $app['order'] = function ($app) {
-            return new Order($app);
+            return new Order(new QueryBuilder(new Client($app)));
         };
     }
 }

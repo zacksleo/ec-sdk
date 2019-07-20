@@ -89,7 +89,7 @@ class QueryBuilder
             // we will call the callback with the current chunk of these results here.
             $results = $this->forPage($page, $count)->get();
 
-            $countResults = $results->total;
+            $countResults = count($results->data);
 
             if ($countResults == 0) {
                 break;
@@ -195,7 +195,7 @@ class QueryBuilder
     {
         $res = $this->forPage(1, 1)->get();
 
-        return $res->total;
+        return $res->totalCount;
     }
 
     /**

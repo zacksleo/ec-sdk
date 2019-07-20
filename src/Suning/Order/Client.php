@@ -33,20 +33,27 @@ class Client extends BaseClient implements Connection
 
         //如果超过30天，则查询历史接口
         if (time() - strtotime($builder->end) > 30 * 3600 * 24) {
-            return $this->resolveResult($client->custom->historyorder->query($params));
+            return $this->resolveResult($client->custom->historyorder->query($params), $builder->limit);
         }
 
-        return $this->resolveResult($client->custom->order->query($params));
+        return $this->resolveResult($client->custom->order->query($params), $builder->limit);
     }
 
     /**
      * 处理返回结果
      *
      * @param array $res
+     * @param int $perPage
      * @return QueryResult
      */
-    private function resolveResult($res)
+    private function resolveResult($res, $perPage)
     {
-        return new QueryResult($res['body'], $res['header']['pageTotal'], $res['header']['pageTotal'] >= $res['header']['pageNo']);
+        $data = $res['body'];
+        $totalCount = $res['header']['totalSize'];
+        $pageCount = $res['header']['pageTotal'];
+        $currentPage = $res['header']['pageNo'];
+        $hasNext = $res['header']['pageTotal'] > $res['header']['pageNo'];
+
+        return new QueryResult($data, $totalCount, $pageCount, $currentPage, $perPage, $hasNext);
     }
 }

@@ -18,5 +18,6 @@ class Application extends ServiceContainer
     protected $providers = [
         Express\ServiceProvider::class,
         Order\ServiceProvider::class,
+        Product\ServiceProvider::class,
     ];
 }

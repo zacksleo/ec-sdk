@@ -18,6 +18,6 @@ class Client extends BaseClient implements Codeable
             'companyName' => $name,
         ]);
 
-        return $res['sn_body']['logisticCompany']['expressCompanyCode'];
+        return $res['body']['expressCompanyCode'] ?? null;
     }
 }

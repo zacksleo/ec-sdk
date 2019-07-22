@@ -17,9 +17,11 @@ $ composer require zacksleo/ec-sdk -vvv
             'key'        => 'key',
             'secret'     => 'secret',
             'debug'      => false,
-            'file'       => __DIR__.'/suning.log',
-            'level'      => 'error',
-            'permission' => 0777,
+            'log' =>[
+                'file'       => __DIR__.'/suning.log',
+                'level'      => 'error',
+                'permission' => 0777,
+            ]
         ];
         $code = Factory::suning($config)->express->name2code('申通快递');
         var_dump($code);

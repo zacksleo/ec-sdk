@@ -35,9 +35,7 @@ class BaseClient
             'key'    => $app->getConfig('key'),
             'secret' => $app->getConfig('secret'),
             'debug'      => $app->getConfig('debug'),
-            'file'       => $app->getConfig('file'),
-            'level'      => $app->getConfig('level'),
-            'permission' => $app->getConfig('permission'),
+            'log' => $app->getConfig('log'),
         ]);
     }
 }

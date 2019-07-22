@@ -32,7 +32,8 @@ class Client extends BaseClient implements Connection
         ];
 
         //如果超过30天，则查询历史接口
-        if (time() - strtotime($builder->end) > 30 * 3600 * 24) {
+
+        if (time() > strtotime('+3 months', strtotime($builder->start))) {
             return $this->resolveResult($client->custom->historyorder->query($params), $builder->limit);
         }
 

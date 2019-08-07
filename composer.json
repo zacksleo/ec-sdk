@@ -9,7 +9,8 @@
         }
     ],
     "require": {
-        "zacksleo/suning-sdk": "*"
+        "zacksleo/suning-sdk": "*",
+        "zacksleo/jingdong-sdk": "*"
     },
     "autoload": {
         "psr-4": {
